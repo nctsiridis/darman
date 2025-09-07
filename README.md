@@ -15,7 +15,7 @@ On the tool user's machine, you must define a `daroot` within `~/.darrc`. The DA
 ## Config
 Darman required you to create a file called `~/.darrc`. The only manual configuration is to provide the daroot by inserting the following line:
 
-`root {daroot}`
+`root {path}`
 
 Every DAR you pull will automatically create an entry for that DAR in `~./darrc`.
 

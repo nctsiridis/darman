@@ -13,7 +13,7 @@ For example:
 On the tool user's machine, you must define a `daroot` within `~/.darrc`. The DAR will then be stored under the directory `{daroot}/{source}~{username}/{repository}@{version}`.
 
 ## Config
-Darman required you to create a file called `~/.darrc`. The only manual configuration is to provide the daroot by inserting the following line:
+Darman requires you to create a file called `~/.darrc`. The only manual configuration is to provide the daroot by inserting the following line:
 
 `root {path}`
 

@@ -1,0 +1,18 @@
+
+Pagination / Limits:
+
+The app will NOT perform paging. 
+If you submit an open ended request such as: github~*/*@*
+You are basically saying "any repository" from any source.
+Which of course makes no sense.
+
+To avoid these issues we impose the "one query per command" rule
+
+so if you leave an open ended source, then github~*/*@*
+
+will do: Go through all source, if combo supported (github would not) then submit request
+
+One command does at most one request .
+
+so * is not valid for the source, you must specify a source
+	

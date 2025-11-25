@@ -1,1 +1,1 @@
-mvn exec:java -Dexec.args="search something"
+mvn exec:java -Dexec.args="search github~nctsiridis/cmatrix@*"

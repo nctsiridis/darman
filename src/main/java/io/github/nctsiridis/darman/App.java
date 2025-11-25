@@ -1,36 +1,29 @@
 package io.github.nctsiridis.darman;
 
 import io.github.nctsiridis.darman.clients.GithubClient;
+import io.github.nctsiridis.darman.common.DAR;
+
+import java.util.ArrayList;
 
 public class App {
 	private GithubClient githubClient;
 
 	public App(GithubClient githubClient) {
-		githubClient = githubClient;
+		this.githubClient = githubClient;
 	}
 
 	// DAR Standard: source~owner/repo@tag
-	public boolean search(String source, String owner, String repo, String tag) {
+	public boolean search(String source, String owner, String repo, String version) {
 		switch (source) {
 			case "github":
-				System.out.println("TODO github");
-				if (owner.charAt(0) == '*' && repo.charAt(0) == '*') {
-					// Search both
-					//githubClient.queryRepoOwner(repo.substring(1), owner.substring(1));
-				} else if (owner.charAt(0) == '*') {
-					// Query by owner, enumerate
-					//githubClient.queryOwnerMatchRepo();
-					// 
-				} else if (repo.charAt(0) == '*') {
-					// Query by repo
-					//githubClient.queryRepoMatchOwner();
-				} else {
-					// Direct search
-					//githubClient.matchRepoOwner
+				try {
+					ArrayList<DAR> results = githubClient.search(owner, repo);
+					for (DAR result: results) {
+						result.display();
+					}
+				} catch (Exception e) {
+					System.out.println("Exception occurred during Github search: " + e.getMessage());
 				}
-
-				// Filter by tag
-			// TODO add more
 		}
 		return false;
 	}

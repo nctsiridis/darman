@@ -1,10 +1,10 @@
-## What is Darman
+# Darman
 Darman is a DAR (Digital Artifact Repository) manager. While conventional package managers and version control platforms provide ways to access their contents (git clone, pip install, etc) I wanted to create a tool that didn't care where a digital artifact was stored and for what purpose (software development, digital art, general file storage), and just pulled their respective repositories into a consistant storage pattern to be reliably accessed by other projects.
 
 ## How it works
 Every DAR is expected to have 4 components usually displayed in the following format:
 
-`{source}~{username}/{repository}@{version}`
+`{source}~{owner}/{repository}@{version}`
 
 For example:
 

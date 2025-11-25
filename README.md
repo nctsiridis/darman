@@ -10,7 +10,9 @@ For example:
 
 `github~nctsiridis/hii@v1.0.0`
 
-On the tool user's machine, you must define a `daroot` within `~/.darrc`. The DAR will then be stored under the directory `{daroot}/{source}~{owner}/{repository}@{version}`.
+On the tool user's machine, you must define a `daroot` within `~/.darrc`. The DAR will then be stored under the directory:
+
+`{daroot}/{source}~{owner}/{repository}@{version}`.
 
 ## Config
 Darman requires you to create a file called `~/.darrc`. The only manual configuration is to provide the daroot by inserting the following line:
